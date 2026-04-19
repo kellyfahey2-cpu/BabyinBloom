@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby in Bloom - Baby Shower</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="botanical-header">
+        <div class="header-content">
+            <h1>Baby in Bloom</h1>
+            <p class="subtitle">A Celebration of New Beginnings</p>
+            <p class="mom-to-be">in honor of mom-to-be</p>
+            <h2 class="baby-name">Kelly Fahey</h2>
+            <p class="hosted-by">hosted by Doreen Fahey and Julie Hancock</p>
+        </div>
+    </header>
 
+    <div class="info-section botanical-border">
+        <div class="info-content">
+            <p class="info-item">Saturday, May 30th</p>
+            <p class="info-item">10:00 AM</p>
+            <p class="info-item">115 Delaware Street, San Antonio</p>
+            <p class="info-item">kindly RSVP</p>
+        </div>
+    </div>
+
+    <nav class="tabs botanical-tabs">
+        <button class="tab-button active" data-tab="rsvp">RSVP</button>
+        <button class="tab-button" data-tab="registry">Registry</button>
+        <button class="tab-button" data-tab="upload">Baby Photo</button>
+    </nav>
+
+    <main>
+        <section id="rsvp" class="tab-content active botanical-card">
+            <h2>Please Let Us Know</h2>
+            <p>Will you be joining us for this special celebration?</p>
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" min="1" max="5" value="1" required>
+                </div>
+                <input type="submit" value="Submit RSVP" class="botanical-btn">
+            </form>
+            <p class="rsvp-contact">(add RSVP email here)</p>
+        </section>
+
+        <section id="registry" class="tab-content botanical-card">
+            <h2>Gift Registry</h2>
+            <p>Please check our registry:</p>
+            <div class="registry-links">
+                <a href="https://my.babylist.com/kelly-fahey-baby-reg" target="_blank" class="botanical-btn">View Our Registry</a>
+            </div>
+        </section>
+
+        <section id="upload" class="tab-content botanical-card">
+            <h2>Baby Photo Guessing Game</h2>
+            <p>Upload a baby picture of yourself for guests to guess who it is!</p>
+            <div class="upload-container">
+                <input type="file" id="babyPic" accept="image/*" class="file-input">
+                <button id="uploadBtn" class="botanical-btn" type="button">Upload Photo</button>
+            </div>
+            <div id="uploadMessage"></div>
+        </section>
+
+        <section class="july-profile botanical-card">
+            <h2>A July Baby</h2>
+            <div class="july-grid">
+                <div class="july-item">
+                    <h3>Birthstone</h3>
+                    <p>Ruby</p>
+                </div>
+                <div class="july-item">
+                    <h3>Birth Bird</h3>
+                    <p>Scarlet Tanager</p>
+                </div>
+                <div class="july-item">
+                    <h3>Flower</h3>
+                    <p>Larkspur</p>
+                </div>
+                <div class="july-item">
+                    <h3>Gem</h3>
+                    <p>Ruby</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="botanical-footer">
+        <p>We can't wait to celebrate with you!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
