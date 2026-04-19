@@ -1,1 +1,317 @@
+/* Botanical Baby Shower Theme */
+:root {
+  --cream: #F5F1E8;
+  --sage: #9CAF88;
+  --sage-dark: #6f8462;
+  --muted-blue: #7BA3A3;
+  --soft-pink: #D4A5A5;
+  --butter: #E8D5B7;
+  --text: #4b4b4b;
+  --text-muted: #7a7a7a;
+  --card: #ffffff;
+  --shadow: rgba(111, 132, 98, 0.18);
+}
 
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: radial-gradient(circle at top, #ffffff 0%, var(--cream) 55%, #efe9de 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+.botanical-header {
+  margin: 28px auto 18px;
+  max-width: 980px;
+  background: linear-gradient(180deg, #fff 0%, #fbfaf6 100%);
+  border: 2px solid var(--sage);
+  border-radius: 28px;
+  box-shadow: 0 10px 30px var(--shadow);
+  padding: 44px 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-header::before,
+.botanical-header::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(circle at 10% 18%, rgba(156, 175, 136, 0.22) 0 18%, transparent 19%),
+    radial-gradient(circle at 90% 80%, rgba(123, 163, 163, 0.18) 0 18%, transparent 19%),
+    radial-gradient(circle at 88% 18%, rgba(212, 165, 165, 0.16) 0 16%, transparent 17%),
+    radial-gradient(circle at 12% 85%, rgba(232, 213, 183, 0.18) 0 16%, transparent 17%);
+  pointer-events: none;
+}
+
+.header-content {
+  text-align: center;
+  position: relative;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  color: var(--sage-dark);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 10px 0 18px;
+  font-style: italic;
+  color: var(--muted-blue);
+}
+
+.mom-to-be {
+  margin: 0;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+}
+
+.baby-name {
+  margin: 10px 0 10px;
+  font-size: clamp(1.8rem, 4.4vw, 2.7rem);
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  color: var(--sage);
+  text-transform: uppercase;
+}
+
+.hosted-by {
+  margin: 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Info section */
+.info-section {
+  max-width: 980px;
+  margin: 0 auto 14px;
+  padding: 18px 18px;
+}
+
+.botanical-border {
+  border-top: 2px dashed rgba(156, 175, 136, 0.8);
+  border-bottom: 2px dashed rgba(156, 175, 136, 0.8);
+}
+
+.info-content {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(156, 175, 136, 0.55);
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: var(--sage-dark);
+  box-shadow: 0 4px 14px rgba(111, 132, 98, 0.10);
+  font-size: 0.98rem;
+}
+
+/* Tabs */
+.tabs {
+  max-width: 980px;
+  margin: 18px auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+}
+
+.tab-button {
+  border: 2px solid var(--sage);
+  background: #fff;
+  color: var(--sage-dark);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+tab-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(111, 132, 98, 0.18);
+}
+
+tab-button.active {
+  background: var(--sage);
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(156, 175, 136, 0.28);
+}
+
+/* Main/cards */
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+tab-content { display: none; }
+tab-content.active { display: block; }
+
+.botanical-card {
+  background: var(--card);
+  border: 2px solid rgba(156, 175, 136, 0.85);
+  border-radius: 22px;
+  padding: 34px 22px;
+  box-shadow: 0 10px 24px var(--shadow);
+  margin: 18px 0;
+}
+
+.botanical-card h2 {
+  text-align: center;
+  margin: 0 0 10px;
+  color: var(--sage-dark);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.botanical-card p {
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+/* Forms */
+.form-group {
+  margin: 14px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--sage-dark);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid rgba(156, 175, 136, 0.75);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus {
+  outline: none;
+  border-color: var(--muted-blue);
+  box-shadow: 0 0 0 4px rgba(123, 163, 163, 0.15);
+}
+
+/* Buttons */
+.botanical-btn {
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: var(--sage);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.botanical-btn:hover {
+  background: var(--muted-blue);
+  transform: translateY(-1px);
+}
+
+/* Upload */
+.upload-container {
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 2px dashed rgba(156, 175, 136, 0.85);
+  background: rgba(245, 241, 232, 0.55);
+  text-align: center;
+}
+
+.file-input {
+  display: block;
+  margin: 0 auto 12px;
+}
+
+#uploadMessage {
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#uploadMessage.success { color: #2f6b3a; }
+#uploadMessage.error { color: #7a2f2f; }
+
+/* July profile */
+.july-profile {
+  background: linear-gradient(135deg, rgba(212,165,165,0.10), rgba(123,163,163,0.10));
+}
+
+.july-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.july-item {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(156,175,136,0.55);
+}
+
+.july-item h3 {
+  margin: 0 0 8px;
+  color: var(--sage-dark);
+  text-align: center;
+  font-weight: 600;
+}
+
+.july-item p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Footer */
+.botanical-footer {
+  max-width: 980px;
+  margin: 22px auto 40px;
+  padding: 14px 16px;
+  text-align: center;
+  color: var(--sage-dark);
+}
+
+@media (max-width: 640px) {
+  .botanical-header { padding: 34px 18px; }
+  .botanical-card { padding: 26px 16px; }
+  .info-item { width: 100%; text-align: center; }
+}
